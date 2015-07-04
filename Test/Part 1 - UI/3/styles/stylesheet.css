@@ -1,0 +1,436 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    outline: 0;
+    font-size: large;
+    font-family: verdana;
+}
+
+#content{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#header{
+    padding-left: 10px;
+    height:50px;
+    line-height: 50px;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+#header p{
+    color: white;
+    background-color: black;
+}
+#footer{
+    padding-left: 10px;
+    color: white;
+    height:50px;
+    line-height: 50px;
+    width:100%;
+    left:0;
+    bottom:0;
+    position: fixed;
+    background-color: black;
+}
+
+#leftSide{
+    -webkit-order: 1;
+    order: 1;
+    -webkit-flex: 0 0 240px;
+    flex: 0 0 240px;
+    border: 1px solid pink;
+}
+#logo{
+    width: 240px;
+    height: 150px;
+    background-image: url(../images/logo.png);
+}
+#menu {
+    width: 100%;
+}
+
+li{
+    padding-left: 10px;
+    display: block;
+    border: 1px solid black;
+    background-color: lightgray;
+    border-radius: 3px;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+li:hover{
+    color:blue;
+}
+li:active{
+    color:red;
+}
+#flex{
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+#center{
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 2;
+    float: left;
+    border: 1px solid red;
+}
+#articleTitle{
+    padding-left: 10px;
+    height:30px;
+    line-height: 30px;
+    width:100%;
+    border: 1px solid blue;
+    display: inline-block;
+}
+#leftCol{
+    box-sizing: border-box;
+    width:50%;
+    float: left;
+    border: 1px solid green;
+}
+#rightCol{
+    box-sizing: border-box;
+    display: inline-block;
+    width:50%;
+    border: 1px solid green;
+}
+#sidebar{
+    -webkit-flex: 1 6 15%;
+    flex: 1 6 15%;
+    -webkit-order: 3;
+    order: 3;
+    vertical-align: top;
+    border: 1px solid black;
+}
+blockquote{
+    display: inline-block;
+    text-align: justify;
+}
+blockquote:before {
+    content: open-quote;
+    font-size: 100%;
+    width: 80%;
+}
+blockquote:after {
+    content: close-quote;
+    font-size: 100%;
+    width: 80%;
+}
+
+
+
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+    #leftSide{
+        -webkit-order: 1;
+        order: 1;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        border: 1px solid pink;
+    }
+
+    li{
+        padding-left: 5px;
+        width: 140px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+}
+
+@media only screen
+and (min-width : 481px)
+and (max-width : 767px) {
+    #leftSide{
+        -webkit-order: 1;
+        order: 1;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        border: 1px solid pink;
+    }
+
+    li{
+        padding-left: 5px;
+        width: 140px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+}
+
+
+
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 321px)
+and (max-width : 480px) {
+    #logo{
+        background-image: url(../images/logo.png);
+        -moz-background-size:100% 100%;
+        -webkit-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #leftSide{
+        flex: 0 0 100%;
+    }
+    #menu{
+        width: 100%;
+    }
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+
+
+
+
+}
+
+
+
+/* Smartphones (small screens) ----------- */
+@media only screen
+and (min-width: 241px)
+and (max-width : 320px) {
+    #logo{
+        background-image: url(../images/logo.png);
+        -moz-background-size:100% 100%;
+        -webkit-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #leftSide{
+        flex: 0 0 100%;
+    }
+    #menu{
+        width: 100%;
+    }
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+}
+
+
+
+
+@media only screen
+and (max-width : 240px) {
+    #logo{
+display: none;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #leftSide{
+        flex: 0 0 100%;
+    }
+    #menu{
+        width: 100%;
+    }
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+}
+
+
+
+
+
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    #leftSide{
+        -webkit-order: 1;
+        order: 1;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        border: 1px solid pink;
+    }
+
+    li{
+        padding-left: 5px;
+        width: 140px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+
+    #flex {
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+
+    #center{
+        -webkit-flex: 3 1 100%;
+        flex: 3 1 100%;
+        -webkit-order: 2;
+        order: 2;
+        float: left;
+        border: 1px solid red;
+    }
+    #leftCol{
+        box-sizing: border-box;
+        width:100%;
+        float: left;
+        border: 1px solid green;
+    }
+    #rightCol{
+        box-sizing: border-box;
+        display: inline-block;
+        width:100%;
+        border: 1px solid green;
+    }
+}
